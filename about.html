@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hackathon Project</title>
     <style>
-        /* Inline CSS */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -15,6 +14,7 @@
             padding: 20px;
             background-color: #f4f4f4;
         }
+
         .button {
             background-color: #61d5f1;
             color: white;
@@ -27,26 +27,32 @@
             display: block;
             margin: 20px auto;
         }
+
         .button:hover {
             background-color: #4aabdf;
         }
+
         #about {
-             /* Hidden by default */
-            background-color: #f9f9f9;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin: 20px auto;
-            max-width: 800px;
-        }
+    background-color: #f9f9f9;
+    padding: 20px; /* Reduced padding */
+    margin-top: 10px; /* Reduced top margin */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+
         .heading-box {
             text-align: center;
         }
+
         .heading-box h2 {
-            color: #61d5f1; /* Blue color */
+            color: #61d5f1;
             font-size: 2.5em;
             margin: 0;
         }
+
         ul {
             font-size: 1.2em;
             line-height: 1.6;
@@ -56,13 +62,44 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px;
+            flex: 0 0 30%; /* Each member takes up 30% of the row */
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            margin: 5px 0;
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .team-member p {
+            margin: 5px 0;
+            color: #666;
+        }
+
     </style>
 </head>
 
 <body>
 
-    
-
+    <!-- About Us Section -->
     <section id="about">
         <div class="heading-box">
             <h2>About Us</h2>
@@ -74,29 +111,61 @@
         </ul>
     </section>
 
-    <script>
-        // Inline JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const button = document.getElementById('toggleButton');
-            const aboutSection = document.getElementById('about');
+    <!-- Team Section -->
+    <section id="team">
+        <div class="heading-box">
+            <h2>Our Team</h2>
+        </div>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="./PICS/sayand.jpg.jpg" alt="Sayan Das">
+                <h3>Member 1</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./PICS/rikhiya.jpg.jpg" alt="Rikhiya Mardanya">
+                <h3>Member 2</h3>
+                <p>Frontend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./PICS/rik.jpg.jpg" alt="Rik Mondal">
+                <h3>Member 3</h3>
+                <p>Machine Learning Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./PICS/suprakash.jpg.jpg" alt="Suprakash Maji">
+                <h3>Member 4</h3>
+                <p>Machine Learning Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./PICS/subham.jpg.jpg" alt="Shubham Das">
+                <h3>Member 5</h3>
+                <p>Backend Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./PICS/sayanp.jpg.jpg" alt="Sayan Paul">
+                <h3>Member 6</h3>
+                <p>Backend Developer</p>
+            </div>
+        </div>
+    </section>
 
-            button.addEventListener('click', function() {
-                if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
-                    aboutSection.style.display = 'block';
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamSection = document.getElementById('team');
+            const toggleButton = document.getElementById('toggleButton');
+
+            // Toggle team section on button click
+            toggleButton.addEventListener('click', function () {
+                if (teamSection.style.display === 'none') {
+                    teamSection.style.display = 'block';
                 } else {
-                    aboutSection.style.display = 'none';
+                    teamSection.style.display = 'none';
                 }
             });
-
-            // Debugging: Check initial state
-            console.log('Initial display style:', aboutSection.style.display);
         });
     </script>
 
 </body>
 
 </html>
-
-
-
-
